@@ -25,3 +25,19 @@ Buon lavoro e buon divertimento! :faccia_leggermente_sorridente:
 
  */
 
+    let parolaUtente = prompt("Inserisci una parola:");
+
+
+    function palindroma(parolaUtente) {
+        // Invertire la parola
+        let parolaInvertita = parolaUtente.split('').reverse().join('');
+        // Confrontare originale e invertita
+        return parolaUtente === parolaInvertita;
+    }
+    
+    if (palindroma(parolaUtente)) {
+        alert(`La parola "${parolaUtente}" è palindroma!`);
+    } else {
+        alert(`La parola "${parolaUtente}" non è palindroma.`);
+    }
+    
