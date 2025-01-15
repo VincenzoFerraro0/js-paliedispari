@@ -19,15 +19,16 @@ Buon lavoro e buon divertimento! :faccia_leggermente_sorridente:
     - creiamo una variabile con la funzione prompt e chiediamo di inserire una parola 
     - creaiamo una funzione 
     - all' interno della funzione dichiariamo una variabile che corrisponderà alla parolaUtente invertita
-    - Confrontiamo la parolaUtente originale con la versione invertita.
-    - Chiamiamo la funzione con la parola inserita dall’utente.
-    - Stampiamo il risultato
+    - Confrontiamo la parolaUtente con la parolaUtente invertita.
+    - Creiamo una condizione dove richiamiamo funzione palindroma con il parametro che vogliamo controllare ovvero parolaUtente.
+    - Se si verifica stampiamo che è palindroma 
+    -   altrimenti non è palindroma
 
  */
 
     let parolaUtente = prompt("Inserisci una parola:");
 
-
+    
     function palindroma(parolaUtente) {
         // Invertire la parola
         let parolaInvertita = parolaUtente.split('').reverse().join('');
