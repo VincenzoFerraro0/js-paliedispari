@@ -35,3 +35,47 @@ Dichiariamo chi ha vinto.
         -che verifica se il risultato è uguale alla scelta utente ha vinto
             -altrimenti il computer ha vinto 
 */
+
+let sceltaUtente = prompt("Scegli 'pari' o 'dispari':").toLowerCase();
+let numeroUtente = parseInt(prompt("Inserisci un numero tra 1 e 5:"), 10);
+let numeroComputer ;
+let risultato ;
+let somma ;
+
+// Genera un numero casuale tra 1 e 5
+function generaNumeroRandom() {
+    return Math.floor(Math.random() * 5) + 1;
+}
+
+numeroComputer = generaNumeroRandom();
+
+// Calcola la somma dei numeri
+somma = numeroComputer + numeroUtente;
+
+// Determina se un numero è pari o dispari
+function determinaPariDispari(numero) {     // "numero"= Parametro da inserire                      
+    if (numero % 2 === 0) {  //creiamo una condizione dove verifichiamo che il parametro inserito è pari
+        return 'pari';      // ci restituisce "pari" è dispari
+    } else {                //altrimenti 
+        return 'dispari';   // ci restituisce dispari 
+    }
+}
+
+// Determina se la somma è pari o dispari
+risultato = determinaPariDispari(somma) // risultato è pari o dispari in base alla somma
+
+// Controlli 
+console.log(`Hai scelto: ${sceltaUtente}`);
+console.log(`Il tuo numero: ${numeroUtente}`);
+console.log(`Numero del computer: ${numeroComputer}`);
+console.log(`Somma: ${somma} (${risultato})`);
+
+// Dichiara il vincitore
+if (risultato === sceltaUtente) {
+    alert(`hai scelto ${risultato} il risultato è ${somma} hai vinto!`);
+} else {
+    alert(`il computer ha scelto ${risultato} il risultato è ${somma} ha vinto!`);
+}
+
+
+
